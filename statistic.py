@@ -4,17 +4,17 @@ from collections import OrderedDict
 
 def print_statistics(dir_name, errors, d_sum, r_num):
     print("-----" + dir_name + " all_xy" + "-----")
-    print("平均")
+    print("Average error")
     print(np.mean(errors))
-    print("分散")
+    print("Variance")
     print(np.var(errors))
-    print("最大")
+    print("Max error")
     print(np.max(errors))
-    print("最小")
+    print("Min error")
     print(np.min(errors))
     errors_sorted = np.sort(errors)
     percent90 = (d_num*r_num//10)*9 - 1
-    print("90%以内誤差")
+    print("90% error")
     print(errors_sorted[percent90])
 
 # @Output

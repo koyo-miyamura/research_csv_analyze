@@ -28,7 +28,7 @@ for dir_name, all_xy in all_xy_s.items():
     errors_sorted = np.sort(errors)
     percent90 = (d_num*r_num//10)*9 - 1 
     print("-----" + dir_name + "-----")
-    print("90%以内誤差")
+    print("90% error")
     print(errors_sorted[percent90])
 
     #0から8まで80個にすれば0.1刻みになる
