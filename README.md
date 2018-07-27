@@ -1,5 +1,11 @@
 # research_csv_analyze
 
+## Requirement
+
+* python3
+* matplotlib==1.5.1
+* numpy==1.11.0
+
 ## Quick Start
 
 ### Create "all.csv"
