@@ -3,7 +3,7 @@ import numpy as np
 import sys
 from collections import OrderedDict
 
-def print_statistics(dir_name, errors, d_sum, r_num):
+def print_statistics(dir_name, errors, d_num, r_num):
     print("-----" + dir_name + " all_xy" + "-----")
     print("Average error")
     print(np.mean(errors))
@@ -45,4 +45,4 @@ r_num = 11 # 行数
 true_xy = [true_xy[i%r_num] for i in range(len(true_xy)*d_num)] # change len(true_xy) into 110 for all.csv
 for dir_name, all_xy in all_xy_s.items():
     errors = [np.linalg.norm(true_xy[i] - all_xy[i]) for i in range(len(all_xy))]
-    print_statistics(dir_name=dir_name, errors=errors, d_sum=d_num, r_num=r_num)
+    print_statistics(dir_name=dir_name, errors=errors, d_num=d_num, r_num=r_num)
